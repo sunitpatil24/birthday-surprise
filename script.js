@@ -15,7 +15,7 @@ const CONFIG = {
   surprise: "“I love you more than all the miles between us.”",
 
   // Optional: put your own MP3 at assets/our-song.mp3
-  music: "assets/our-song.mp3"
+  music: "our-song.mp3"
 };
 /* ========================= */
 
