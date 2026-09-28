@@ -1,0 +1,91 @@
+:root{
+  --bg:#0d0815; --panel:#171022; --text:#f8f1f4; --muted:#bcaebb;
+  --accent:#ff7d9e; --accent2:#f6c5d2; --line:rgba(255,255,255,.11);
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}
+button{font:inherit;color:inherit}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.6}
+#particles:before,#particles:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);width:4px;height:4px;background:#fff;box-shadow:12vw 16vh #fff,22vw 73vh #ffdce6,37vw 28vh #fff,49vw 82vh #fff,63vw 19vh #ffdce6,78vw 61vh #fff,91vw 31vh #fff,84vw 88vh #ffdce6,8vw 91vh #fff,56vw 48vh #fff;animation:twinkle 4s ease-in-out infinite}
+#particles:after{left:40%;top:20%;transform:scale(.6);animation-delay:1.5s}
+main{height:100%;width:100%}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 22px;opacity:0;visibility:hidden;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease,visibility .7s}
+.screen.active{opacity:1;visibility:visible;transform:none}
+.hero{background:radial-gradient(circle at 50% 42%,rgba(170,66,103,.23),transparent 35%)}
+.hero-glow{position:absolute;width:420px;height:420px;background:rgba(255,93,139,.12);filter:blur(100px);border-radius:50%}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent2);margin-bottom:22px}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:.96;margin:0}
+h1{font-size:clamp(58px,11vw,112px)}
+h2{font-size:clamp(46px,7vw,78px);max-width:800px}
+em{font-style:italic;color:var(--accent2)}
+.accent{color:var(--accent)}
+.hero-copy{font-size:15px;line-height:1.8;color:var(--muted);margin:28px 0 34px}
+.tiny-note{font-size:10px;color:#7f7184;margin-top:20px;letter-spacing:.08em}
+.primary,.text-btn{border:0;cursor:pointer}
+.primary{background:var(--text);color:#160c17;border-radius:999px;padding:15px 22px;font-weight:600;transition:transform .25s,box-shadow .25s}
+.primary:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(255,125,158,.2)}
+.primary span,.text-btn span{margin-left:12px}
+.text-btn{background:none;color:var(--accent2);margin-top:34px;font-size:13px;letter-spacing:.04em}
+.soft{color:var(--muted);line-height:1.8;font-size:14px;margin:30px 0 0}
+.distance-card{display:flex;align-items:center;gap:25px;width:min(760px,100%);margin:55px 0 5px}
+.place{display:flex;flex-direction:column;gap:6px;min-width:130px;text-align:left}
+.place.right{text-align:right}.place strong{font-family:"Cormorant Garamond";font-size:28px}.place small{font-size:10px;color:#817487;text-transform:uppercase;letter-spacing:.12em}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent);margin-bottom:4px}
+.place.right .dot{margin-left:auto}
+.flight-line{flex:1;display:flex;align-items:center;gap:10px;color:var(--accent);font-size:10px}
+.flight-line i{height:1px;background:linear-gradient(90deg,var(--accent),transparent,var(--accent));flex:1;border-top:1px dashed rgba(255,125,158,.4)}
+.countdown{display:flex;gap:12px;margin:48px 0 10px}
+.countdown div{width:100px;padding:18px 10px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:18px}
+.countdown b{display:block;font-family:"Cormorant Garamond";font-size:48px;font-weight:600}
+.countdown span{font-size:9px;color:#8f8291;text-transform:uppercase;letter-spacing:.13em}
+.polaroids{position:relative;width:min(720px,100%);height:330px;margin:35px 0 0}
+.photo{position:absolute;background:#f8f2ed;padding:10px 10px 35px;box-shadow:0 20px 50px rgba(0,0,0,.35);width:205px;margin:0;color:#30232b;transition:transform .3s}
+.photo img{display:block;width:100%;height:215px;object-fit:cover;background:#ddd}
+.photo figcaption{font-family:"Cormorant Garamond";font-size:19px;margin-top:10px}
+.p1{left:9%;top:20px;transform:rotate(-8deg)}.p2{left:38%;top:0;transform:rotate(3deg);z-index:2}.p3{right:9%;top:28px;transform:rotate(8deg)}
+.photo:hover{transform:translateY(-12px) rotate(0)!important;z-index:4}
+.reason-grid{width:min(760px,100%);display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:40px;border:1px solid var(--line)}
+.reason-grid article{text-align:left;padding:25px;background:rgba(15,9,22,.9);min-height:145px}
+.reason-grid span{font-size:10px;color:var(--accent);letter-spacing:.15em}.reason-grid p{font-family:"Cormorant Garamond";font-size:24px;line-height:1.15;margin:17px 0 0}
+.letter{width:min(650px,100%);max-height:62vh;overflow:auto;text-align:left;padding:35px 38px;background:#f5ede8;color:#3a2730;box-shadow:0 25px 70px rgba(0,0,0,.35);transform:rotate(-.6deg);margin-bottom:25px}
+.letter-top{font-family:"Cormorant Garamond";font-size:25px;margin-bottom:22px}.letter-body{font-family:"Cormorant Garamond";font-size:20px;line-height:1.45}.letter-body p{margin:0 0 15px}.signature{margin-top:28px!important}.signature span{font-style:italic;color:#8c3c59}
+.final-screen{background:radial-gradient(circle at 50% 45%,rgba(255,87,130,.2),transparent 36%)}
+.final-content{position:relative;z-index:3}
+.heart{font-size:50px;color:var(--accent);animation:heartbeat 1.5s infinite;margin-bottom:18px;text-shadow:0 0 35px rgba(255,125,158,.5)}
+.final-screen h1{font-size:clamp(54px,9vw,90px)}
+.final-message{font-family:"Cormorant Garamond";font-size:25px;line-height:1.25;color:var(--muted);margin:20px 0 25px}
+.surprise-box{width:min(450px,100%);padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:24px}
+.gift{font-size:48px}.surprise-box h3{margin:10px 0 6px;font-size:14px}.surprise-box p{font-family:"Cormorant Garamond";font-size:21px;color:var(--accent2);margin:0}.restart{margin-top:18px;font-size:12px}
+.music-pill{position:fixed;top:20px;right:20px;z-index:20;display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border:1px solid var(--line);border-radius:999px;background:rgba(12,7,18,.72);backdrop-filter:blur(10px);font-size:10px;color:#a99ba8}
+.music-pill button{border:0;background:#241323;border-radius:50%;width:28px;height:28px;cursor:pointer;color:var(--accent)}
+.progress{position:fixed;bottom:0;left:0;right:0;height:2px;background:rgba(255,255,255,.05);z-index:20}.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .7s}
+#confetti{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.reveal{animation:rise .9s both}.delay-1{animation-delay:.12s}.delay-2{animation-delay:.24s}.delay-3{animation-delay:.36s}.delay-4{animation-delay:.48s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(1)}}
+@media(max-width:650px){
+  .screen{padding:45px 18px}
+  .distance-card{gap:10px;margin-top:38px}.place{min-width:90px}.place strong{font-size:22px}.place small{font-size:8px}
+  .countdown{gap:6px}.countdown div{width:76px;padding:14px 5px}.countdown b{font-size:38px}.countdown span{font-size:7px}
+  .polaroids{height:275px}.photo{width:145px;padding:7px 7px 25px}.photo img{height:175px}.photo figcaption{font-size:15px}.p1{left:3%}.p2{left:31%}.p3{right:3%}
+  .reason-grid{grid-template-columns:1fr}.reason-grid article{min-height:110px;padding:18px}.reason-grid p{font-size:21px}
+  .letter{padding:25px 22px;max-height:59vh}.letter-body{font-size:18px}
+}
+
+
+/* Birthday-today mode */
+.birthday-now {
+  width: min(380px, 92vw);
+  padding: 28px 35px;
+  border: 1px solid rgba(255,125,158,.25);
+  background: rgba(255,125,158,.07);
+  border-radius: 24px;
+  box-shadow: 0 0 50px rgba(255,125,158,.08);
+}
+.birthday-now b { display:block; font-size:42px; color:var(--accent); animation:heartbeat 1.5s infinite; }
+.birthday-now span { display:block; margin-top:8px; font-size:11px; letter-spacing:.25em; color:var(--accent2); }
+.final-screen .final-content { width:min(680px,100%); display:flex; flex-direction:column; align-items:center; }
+.final-screen .surprise-box { margin-left:auto; margin-right:auto; text-align:center; }
+@media(max-width:650px){ .birthday-now{padding:24px 20px} }
