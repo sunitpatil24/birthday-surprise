@@ -2,7 +2,7 @@
    PERSONALIZE THIS SECTION
    ========================= */
 const CONFIG = {
-  name: "Happy Birthday, My Love",
+  name: "My Love",
   from: "My heart",
   to: "Your heart",
 
@@ -15,7 +15,7 @@ const CONFIG = {
   surprise: "“I love you more than all the miles between us.”",
 
   // Optional: put your own MP3 at assets/our-song.mp3
-  music: "our-song.mp3"
+  music: "assets/our-song.mp3"
 };
 /* ========================= */
 
