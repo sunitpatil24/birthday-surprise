@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120b20">
+  <title>For You ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles"></div>
+  <div class="music-pill" id="musicPill">
+    <button id="musicBtn" aria-label="Toggle music">♪</button>
+    <span id="musicLabel">Our song</span>
+  </div>
+
+  <main>
+    <!-- 01 INTRO -->
+    <section class="screen hero active" data-screen="0">
+      <div class="hero-glow"></div>
+      <div class="eyebrow reveal">A little something from far away</div>
+      <h1 class="reveal delay-1">Hey, <span class="accent" data-name>My Love</span>…</h1>
+      <p class="hero-copy reveal delay-2">I couldn't be there to steal a birthday hug,<br>so I made you a little journey instead.</p>
+      <button class="primary reveal delay-3" data-next>Start the surprise <span>→</span></button>
+      <div class="tiny-note reveal delay-4">Turn your sound on for the full experience ♫</div>
+    </section>
+
+    <!-- 02 DISTANCE -->
+    <section class="screen distance" data-screen="1">
+      <div class="eyebrow">01 / 06</div>
+      <h2>Different places.<br><em>Same sky.</em></h2>
+      <div class="distance-card">
+        <div class="place">
+          <span class="dot"></span>
+          <strong data-from>My place</strong>
+          <small>where I am</small>
+        </div>
+        <div class="flight-line"><span>✦</span><i></i><span>✦</span></div>
+        <div class="place right">
+          <span class="dot"></span>
+          <strong data-to>Your place</strong>
+          <small>where you are</small>
+        </div>
+      </div>
+      <p class="soft">Miles can measure the distance between us.<br>They've never measured what you mean to me.</p>
+      <button class="text-btn" data-next>Keep going <span>→</span></button>
+    </section>
+
+    <!-- 03 BIRTHDAY -->
+    <section class="screen birthday-screen" data-screen="2">
+      <div class="eyebrow">02 / 06</div>
+
+      <p class="birthday-date">28 September 2026</p>
+
+      <h2>Today, I get to celebrate <em>you.</em></h2>
+
+      <p class="soft">No more counting down. Today is all about you. ❤️</p>
+
+      <button class="text-btn" data-next>
+        And now… the memories <span>→</span>
+      </button>
+    </section>
+
+    <!-- 04 MEMORIES -->
+    <section class="screen memories" data-screen="3">
+      <div class="eyebrow">03 / 06</div>
+      <h2>Little moments,<br><em>big memories.</em></h2>
+      <div class="polaroids">
+        <figure class="photo p1">
+          <img src="assets/photo1.jpg" alt="Memory 1">
+          <figcaption>Shy Baby ❤️</figcaption>
+        </figure>
+        <figure class="photo p2">
+          <img src="assets/photo2.jpg" alt="Memory 2">
+          <figcaption>Study Mood</figcaption>
+        </figure>
+        <figure class="photo p3">
+          <img src="assets/photo3.jpg" alt="Memory 3">
+          <figcaption>Baby Pat ❤️</figcaption>
+        </figure>
+      </div>
+            <button class="text-btn" data-next>There is more <span>→</span></button>
+    </section>
+
+    <!-- 05 REASONS -->
+    <section class="screen reasons" data-screen="4">
+      <div class="eyebrow">04 / 06</div>
+      <h2>A few reasons<br>I love <em>you.</em></h2>
+      <div class="reason-grid">
+        <article><span>01</span><p>Your laugh makes ordinary days feel special.</p></article>
+        <article><span>02</span><p>You make distance feel smaller just by being you.</p></article>
+        <article><span>03</span><p>I love the little things you probably don't even notice.</p></article>
+        <article><span>04</span><p>With you, even “goodnight” feels like a promise.</p></article>
+      </div>
+      <button class="text-btn" data-next>One last thing… <span>→</span></button>
+    </section>
+
+    <!-- 06 LETTER -->
+    <section class="screen letter-screen" data-screen="5">
+      <div class="eyebrow">05 / 06</div>
+      <div class="letter">
+        <div class="letter-top">For <span data-name>My Love</span>,</div>
+        <div class="letter-body">
+          <p>Happy birthday, my love.</p>
+          <p>I wish I could be next to you today—to see your face when you smile, annoy you a little, hold your hand, and make this day feel as special as you are.</p>
+          <p>Until that day comes, I hope this little corner of the internet reminds you that there is someone out here thinking about you, missing you, and choosing you—even from miles away.</p>
+          <p>Thank you for every call, every message, every silly conversation, and every moment that makes this distance worth crossing.</p>
+          <p>One day, we won't have to count the miles anymore.</p>
+          <p class="signature">Until then,<br><span data-signature>Always yours ❤️</span></p>
+        </div>
+      </div>
+      <button class="primary" data-next>Open your birthday surprise <span>→</span></button>
+    </section>
+
+    <!-- 07 FINAL -->
+    <section class="screen final-screen" data-screen="6">
+      <canvas id="confetti"></canvas>
+      <div class="final-content">
+        <div class="eyebrow">06 / 06</div>
+        <div class="heart">♥</div>
+        <h1>Happy Birthday,<br><span data-name>My Love</span>!</h1>
+        <p class="final-message" data-final-message>Distance is temporary.<br>Us is my favourite forever.</p>
+        <div class="surprise-box">
+          <div class="gift-ribbon"></div>
+          <div class="gift">🎁</div>
+          <h3>Your real surprise is waiting…</h3>
+          <p data-surprise>“I love you more than all the miles between us.”</p>
+        </div>
+        <button class="primary restart" id="restart">Replay our little story ↺</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress"><i></i></div>
+  <script src="script.js"></script>
+</body>
+</html>
