@@ -2,16 +2,16 @@
    PERSONALIZE THIS SECTION
    ========================= */
 const CONFIG = {
-  name: "My Love",
-  from: "My place",
-  to: "Your place",
+  name: "Happy Birthday, My Love",
+  from: "My heart",
+  to: "Your heart",
 
   // Use YYYY-MM-DDTHH:MM:SS in the birthday person's local time.
   // Example: "2027-05-14T00:00:00"
-  birthday: "2027-05-14T00:00:00",
+  birthday: "2026-09-28T00:00:00",
 
-  signature: "Always yours ❤️",
-  finalMessage: "Distance is temporary.<br>Us is my favourite forever.",
+  signature: "Forever yours ❤️",
+  finalMessage: "No matter how many miles are between us,<br>my heart is always with you.",
   surprise: "“I love you more than all the miles between us.”",
 
   // Optional: put your own MP3 at assets/our-song.mp3
